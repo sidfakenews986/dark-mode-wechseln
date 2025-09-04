@@ -11,7 +11,7 @@ modeToggleButton.addEventListener('click', () => {
     body.classList.toggle('light-mode');
 
     const isDarkMode = body.classList.contains('dark-mode');
-    // Save user preference to local storage
+    // Save user preference for dark mode to local storage
     localStorage.setItem('darkMode', isDarkMode);
     updateButtonText();
 });

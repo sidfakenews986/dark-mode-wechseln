@@ -22,3 +22,7 @@ if (localStorage.getItem('darkMode') === 'true') {
     body.classList.remove('dark-mode');
     modeToggleButton.textContent = 'Wechseln zu Dunkelmodus';
 }
+
+// Ensure the button correctly reflects current mode on page load
+const isDarkMode = body.classList.contains('dark-mode');
+modeToggleButton.textContent = isDarkMode ? 'Wechseln zu Lichtmodus' : 'Wechseln zu Dunkelmodus';

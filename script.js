@@ -6,23 +6,23 @@ modeToggleButton.addEventListener('click', () => {
     body.classList.toggle('light-mode');
 
     const isDarkMode = body.classList.contains('dark-mode');
-    modeToggleButton.textContent = isDarkMode ? 'Wechseln zu Lichtmodus' : 'Wechseln zu Dunkelmodus';
+    modeToggleButton.textContent = isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode';
 
-    // Speichern der Benutzereinstellung in der lokalen Speicherung
+    // Save user preference to local storage
     localStorage.setItem('darkMode', isDarkMode);
 });
 
-// Überprüfen, ob der Dunkelmodus gespeichert ist
+// Check if dark mode is saved
 if (localStorage.getItem('darkMode') === 'true') {
     body.classList.add('dark-mode');
     body.classList.remove('light-mode');
-    modeToggleButton.textContent = 'Wechseln zu Lichtmodus';
+    modeToggleButton.textContent = 'Switch to Light Mode';
 } else {
     body.classList.add('light-mode');
     body.classList.remove('dark-mode');
-    modeToggleButton.textContent = 'Wechseln zu Dunkelmodus';
+    modeToggleButton.textContent = 'Switch to Dark Mode';
 }
 
 // Ensure the button correctly reflects current mode on page load
 const isDarkMode = body.classList.contains('dark-mode');
-modeToggleButton.textContent = isDarkMode ? 'Wechseln zu Lichtmodus' : 'Wechseln zu Dunkelmodus';
+modeToggleButton.textContent = isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode';

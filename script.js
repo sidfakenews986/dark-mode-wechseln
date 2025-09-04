@@ -17,7 +17,8 @@ modeToggleButton.addEventListener('click', () => {
 });
 
 // Check if dark mode is saved
-if (localStorage.getItem('darkMode') === 'true') {
+const darkModePreference = localStorage.getItem('darkMode');
+if (darkModePreference === 'true') {
     body.classList.add('dark-mode');
     body.classList.remove('light-mode');
 } else {
